@@ -34,9 +34,9 @@ class PascalVoc(torch.utils.data.Dataset):
     def __init__(self, root, transforms):
         self.root = root
         self.transforms = transforms
-        self.imgs = natsorted(os.listdir(os.path.join(root, 'Images')))[0:100]
-        self.annot = natsorted(os.listdir(os.path.join(root, 'annotations')))[0:100]
-        self.masks = natsorted(os.listdir(os.path.join(root, 'GT')))[0:100]
+        self.imgs = natsorted(os.listdir(os.path.join(root, 'Images')))
+        self.annot = natsorted(os.listdir(os.path.join(root, 'annotations')))
+        self.masks = natsorted(os.listdir(os.path.join(root, 'GT')))
         self.class_to_label = {name: i for i, name in enumerate(voc_classes)}
         self.idx_to_class = {i: name for i, name in enumerate(voc_classes)}
         assert len(self.annot) == len(self.imgs) == len(self.masks), 'Missing data'
