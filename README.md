@@ -55,8 +55,8 @@ Tables 1-2 show the mean average precision of the best models for all classes an
 
 |  Network                  | Epochs |   lr  | Optimizer  | mAP @IoU </br>[0:50,0:05,0:95] </br> detection | mAP @IoU=50 </br> detection |mAP @IoU=75 </br>detection | mAP @IoU </br>[0:50,0:05,0:95] </br> segmentation| mAP @IoU=50 </br> segmentation|mAP @IoU=75 </br> segmentation |
 |:-------------------------:|:------:|-------:|:----------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
-| Faster-RCNN-ResNet50-FPN  |  15    | 0.005  |   SGD      |   51.7   |  __79.1__   |   56.13   |  NA     |   NA     |   NA     | 
-| Mask-RCNN-ResNet50-FPN    |  15    | 0.005  |   SGD      |   __53.63__   |  78.2   |   __62.43__  |  __44.56__    |  __71.43__    |  47.7 | 
+| Faster-RCNN-ResNet50-FPN  |  15    | 0.005  |   SGD      |   51.7   |  **79.1**   |   56.13   |  NA     |   NA     |   NA     | 
+| Mask-RCNN-ResNet50-FPN    |  15    | 0.005  |   SGD      |   **53.63**   |  78.2   |   **62.43**  |  **44.56**    |  **71.43**    |  **47.7** | 
 | Mask-RCNN-ResNet101-FPN   |  20    | 0.0001 |   Adam     |   42.1   |  72.2   |   44.4  |  38.2   | 64.2    |  39.8    | 
 | Mask-RCNN-ResNet101-FPN-CA |  20    | 0.0001 |   Adam     |   43.7   |  69.9   |   48.8   |  39.2   |   63.9   |   42.5  |
 
@@ -74,6 +74,8 @@ Tables 1-2 show the mean average precision of the best models for all classes an
 |Mask-RCNN-ResNet101-FPN-CA|segmentation|88\.12|0\.0|84\.63|45\.96|46\.77|80\.85|77\.05|75\.22|30\.09|72\.22|63\.64|76\.52|76\.81|74\.83|80\.62|26\.84|64\.42|62\.88|93\.61|	57\.27|
 
 ### 4.1 Inference
+
+The best models inference on the test subset are depicted in Figure 1.
 
 <p align="center">
 <img src='inference/predictions_fasterrcnn-resnet50-fpn-15-0.005.png' height='300' title='faster' alt='detection-fast'/></p>
@@ -98,7 +100,7 @@ Tables 1-2 show the mean average precision of the best models for all classes an
 
 <p align="center">
  
-Figure 1. Trained Models inference on the test set. **(a)** Faster-RCNN-ResNet-50-FPN. **(b)** Mask-RCNN-ResNet50-FPN. **(c)** Mask-RCNN-ResNet101-FPN. (d) Mask-RCNN-ResNet101-FPN-CA. </p>
+**Figure 1**. Trained Models inference on the test set. **(a)** Faster-RCNN-ResNet-50-FPN. **(b)** Mask-RCNN-ResNet50-FPN. **(c)** Mask-RCNN-ResNet101-FPN. **(d)** Mask-RCNN-ResNet101-FPN-CA. </p>
 
 
 ## References
