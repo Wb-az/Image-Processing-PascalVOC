@@ -1,4 +1,4 @@
-<h1><div style="text-align: center;"> COVID-19 Computer Vision: Pascal VOC dataset</div></h1>
+<h1><div style="text-align: center;"> Computer Vision: Pascal VOC dataset</div></h1>
 
 <h2><div style="text-align: center;"> Instance Segmentation and detection of Pascal VOC objects </div></h2>
 
