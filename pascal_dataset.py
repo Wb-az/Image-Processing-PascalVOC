@@ -84,10 +84,10 @@ class PascalVoc(torch.utils.data.Dataset):
             crop = mask[box[1]:box[3], box[0]:box[2]]
             msk_array[box[1]:box[3], box[0]:box[2]] = crop
 
-            # Convert the mask to binary masks, all matches set to 1
+            # Convert the mask to binary masks, matches set to 1
             msk_array[msk_array == labels[i]] = 1
             msk_array[msk_array == 255] = 1
-            msk_array[msk_array != labels[i]] = 0
+            msk_array[msk_array != 1] = 0
             masks.append(msk_array)
 
         # Convert to tensors
