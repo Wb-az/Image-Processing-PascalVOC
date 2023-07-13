@@ -17,8 +17,6 @@ from torch.utils import data as data
 #####################################
 
 
-np.random.seed(123)
-np.random.seed(123)
 torch.manual_seed(123)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -86,9 +84,10 @@ class PascalVoc(torch.utils.data.Dataset):
             crop = mask[box[1]:box[3], box[0]:box[2]]
             msk_array[box[1]:box[3], box[0]:box[2]] = crop
 
-            # Convert the mask to binary masks, all pixel matches set to 1
-            msk_array[msk_array != labels[i]] = 0
+            # Convert the mask to binary masks, all matches set to 1
             msk_array[msk_array == labels[i]] = 1
+            msk_array[msk_array == 255] = 1
+            msk_array[msk_array != labels[i]] = 0
             masks.append(msk_array)
 
         # Convert to tensors
